@@ -14,6 +14,7 @@ ready-to-post sizes for YouTube, Instagram and TikTok.
 ![Key](https://img.shields.io/badge/API%20key-Session%20only,%20auto%20wipe-green)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 [![Live site](https://img.shields.io/badge/Live%20site-Open%20now-teal)](https://mukund-buddy.github.io/smart-thumbnail-designer/)
+[![CI](https://github.com/mukund-buddy/smart-thumbnail-designer/actions/workflows/ci.yml/badge.svg)](https://github.com/mukund-buddy/smart-thumbnail-designer/actions/workflows/ci.yml)
 
 **Open the live site: <https://mukund-buddy.github.io/smart-thumbnail-designer/>**
 
@@ -23,6 +24,30 @@ ready-to-post sizes for YouTube, Instagram and TikTok.
 <p align="center"><sub>Narrow screens stay usable - all controls stack vertically.</sub></p>
 
 </div>
+
+---
+
+## See it in action
+
+The whole key-free flow, driven in the actual app: paste a YouTube link, the
+official thumbnail is fetched, the 16:9 crop is dragged into place, applied
+and the export panel is ready.
+
+<img src="docs/images/edit-flow.gif" alt="Animated run-through: pasting a YouTube link, fetching the official thumbnail, dragging the 16:9 crop handle and applying it" width="860" />
+<p align="center"><sub>Paste link - fetch thumbnail - drag crop - apply - export panel. No API key used at any step.</sub></p>
+
+Full-size stills of the same session:
+
+<img src="docs/images/flow-editor.png" alt="Workspace with the fetched thumbnail, canvas tools and the export asset panel" width="720" />
+<p align="center"><sub>Workspace - fetched thumbnail on canvas, export presets on the right.</sub></p>
+<img src="docs/images/flow-crop.png" alt="Crop overlay with the 16:9 selection box being dragged on the thumbnail" width="720" />
+<p align="center"><sub>Crop overlay - the drag handle pulled inward, ratio locked to 16:9.</sub></p>
+<img src="docs/images/flow-crop-applied.png" alt="Canvas after Apply Crop showing the cropped thumbnail" width="720" />
+<p align="center"><sub>After Apply Crop - the selected region becomes the working image.</sub></p>
+
+These captures were taken with a real browser driving the deployed files of
+this repo; nothing is mocked. AI steps (element detection, smart edits,
+auto-enhance) are not part of the GIF and need your own Gemini key at runtime.
 
 ---
 
@@ -93,13 +118,18 @@ smart-thumbnail-designer/
 │   ├── index-*.js              # full app bundle (React compiled)
 │   └── index-*.css             # Tailwind compiled stylesheet
 ├── logo.png / favicon.png      # brand images
-├── docs/                       # README preview screenshots (live-site captures)
+├── docs/
+│   ├── preview-*.png           # home-screen captures (desktop + mobile)
+│   └── images/                 # edit-flow GIF + workspace/crop stills
 ├── source/                     # the original React/TypeScript app (read/edit)
 │   ├── App.tsx, index.tsx, index.css
 │   ├── components/  (Header, Footer, Button)
 │   ├── services/    (geminiService, youtubeService, keyStore)
 │   └── vite.config.ts, package.json, ...
+├── .github/
+│   └── workflows/ci.yml        # lint + build check (runs on every push/PR)
 ├── CONTRIBUTING.md             # how to help out
+├── ROADMAP.md                  # what is done / next / later, linked to issues
 └── SECURITY.md                 # how to report a security issue
 ```
 
@@ -113,9 +143,22 @@ npm install
 npm run build -- --base=./     # outputs to source/dist
 ```
 
+```bash
+cd source
+npm install
+npm run build -- --base=./     # outputs to source/dist
+```
+
 Then copy the contents of `source/dist` back to this repo root and commit.
 The `--base=./` flag keeps asset paths relative so the result stays
-host-anywhere.
+host-anywhere. For a deployment that lives at this repo's GitHub Pages URL,
+`npm run build:pages` emits the same files with that repo base baked in.
+
+## Roadmap
+
+Done / next / later items live in [ROADMAP.md](ROADMAP.md), each linked to its
+issue on the tracker. Small, good-first-issue sized tasks are labelled on the
+[issue tracker](https://github.com/mukund-buddy/smart-thumbnail-designer/issues).
 
 ## Security posture
 
