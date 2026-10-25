@@ -9,7 +9,7 @@ import React from 'react';
 export const Footer: React.FC = () => {
   return (
     <footer className="border-t border-zinc-900 p-6 text-center text-zinc-600 text-[10px] uppercase tracking-widest">
-      <p>&copy; 2024 Smart Thumbnail AI. Powered by Google Gemini AI & Nano Banana.</p>
+      <p>&copy; {new Date().getFullYear()} Smart Thumbnail Designer. Powered by Google Gemini AI &amp; Nano Banana.</p>
     </footer>
   );
 };

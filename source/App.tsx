@@ -446,9 +446,15 @@ const App: React.FC = () => {
 
   const downloadImage = (url: string | null, filename: string) => {
     if (!url) return;
+    // Match the extension to the actual payload: fetched thumbnails are
+    // data:image/jpeg bodies, AI outputs are PNG. A wrong extension makes
+    // some OS viewers refuse to open the file.
+    const name = /^data:image\/jpe?g\b/.test(url)
+      ? filename.replace(/\.png$/i, '.jpg')
+      : filename;
     const link = document.createElement('a');
     link.href = url;
-    link.download = filename;
+    link.download = name;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
