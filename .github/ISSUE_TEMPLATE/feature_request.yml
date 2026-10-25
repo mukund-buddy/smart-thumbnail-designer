@@ -1,0 +1,36 @@
+name: Feature request
+description: Suggest a new capability or improvement
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep in mind this repo is the **static edition** - proposals that need
+        a backend server are possible but bigger, and will be labeled accordingly.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What are you trying to achieve, and what is missing or annoying today?
+      placeholder: Exporting Shorts-size thumbnails always needs manually cropping first.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would you like to happen? Any alternative ideas?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints acknowledgment
+      options:
+        - label: I understand this is a static, client-only app (no backend storage / no accounts).
+          required: true
+        - label: AI features are limited by what the browser can do with a per-user Gemini key.
+          required: false

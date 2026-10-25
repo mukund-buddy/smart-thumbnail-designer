@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security issue
+    url: https://github.com/mukund-buddy/smart-thumbnail-designer/security/policy
+    description: Vulnerabilities, exposed keys or app-security problems - report privately here, never in a public issue.
+  - name: Documentation
+    url: https://github.com/mukund-buddy/smart-thumbnail-designer#readme
+    description: Hosting steps, key-card usage and module docs - most how-to questions are answered there.

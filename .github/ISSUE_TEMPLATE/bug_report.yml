@@ -1,0 +1,62 @@
+name: Bug report
+description: Something in the app is broken or behaves unexpectedly
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill in the details
+        below. Never paste your Gemini API key anywhere in a bug report.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug - what you expected vs what happened.
+      placeholder: Clicking Fetch Thumbnail on a valid youtube.com/watch link gives "Could not read a video ID" even though the link is valid.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the site on GitHub Pages
+        2. Paste https://youtube.com/watch?v=...
+        3. Click Fetch Thumbnail
+        4. See the error
+    validations:
+      required: true
+
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where does it happen?
+      options:
+        - The hosted GitHub Pages site
+        - My own static host (Netlify, Cloudflare, etc.)
+        - Locally (source/ dev server)
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and OS
+      placeholder: Chrome 130 on Windows 11
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors (if any)
+      description: Open DevTools (F12) -> Console tab, copy any red error lines here.
+      render: text
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Attach if visual. Blur out anything you do not want public.
