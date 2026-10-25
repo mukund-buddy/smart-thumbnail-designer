@@ -13,6 +13,14 @@ ready-to-post sizes for YouTube, Instagram and TikTok.
 ![No Node](https://img.shields.io/badge/Hosting-No%20Node%20required-purple)
 ![Key](https://img.shields.io/badge/API%20key-Session%20only,%20auto%20wipe-green)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
+[![Live site](https://img.shields.io/badge/Live%20site-Open%20now-teal)](https://mukund-buddy.github.io/smart-thumbnail-designer/)
+
+**Open the live site: <https://mukund-buddy.github.io/smart-thumbnail-designer/>**
+
+<img src="docs/preview-desktop.png" alt="Smart Thumbnail Designer home screen: session key card, drag-and-drop zone and YouTube link input" width="860" />
+<p align="center"><sub>Desktop - key card, drop zone and the no-key YouTube import in one screen.</sub></p>
+<img src="docs/preview-mobile.png" alt="Narrow-screen layout of Smart Thumbnail Designer with stacked controls" width="320" />
+<p align="center"><sub>Narrow screens stay usable - all controls stack vertically.</sub></p>
 
 </div>
 
@@ -85,6 +93,7 @@ smart-thumbnail-designer/
 │   ├── index-*.js              # full app bundle (React compiled)
 │   └── index-*.css             # Tailwind compiled stylesheet
 ├── logo.png / favicon.png      # brand images
+├── docs/                       # README preview screenshots (live-site captures)
 ├── source/                     # the original React/TypeScript app (read/edit)
 │   ├── App.tsx, index.tsx, index.css
 │   ├── components/  (Header, Footer, Button)
