@@ -7,7 +7,7 @@
     "dev": "vite",
     "lint": "tsc --noEmit",
     "build": "vite build",
-    "build:pages": "vite build --base=/Smart-Thumbnail-AI-Editor/",
+    "build:pages": "vite build --base=/smart-thumbnail-designer/",
     "preview": "vite preview"
   },
   "dependencies": {
