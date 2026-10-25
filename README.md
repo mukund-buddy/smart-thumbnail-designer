@@ -28,7 +28,7 @@ ready-to-post sizes for YouTube, Instagram and TikTok.
 
 ## Why this repo exists
 
-This is the **no-Node edition** of [Smart Thumbnail AI Editor](https://github.com/mukund-buddy/Smart-Thumbnail-AI-Editor).
+This is the **no-Node edition** of the original Smart Thumbnail AI Editor app.
 The full React/TypeScript app is already compiled for you and committed as
 plain static files. There is no `package.json` to install, no build step to
 run and no server to maintain at the repo root. Anyone can:
@@ -138,10 +138,10 @@ on the [issue tracker](https://github.com/mukund-buddy/smart-thumbnail-designer/
 
 ## Credits
 
-The app was built as
-[Smart Thumbnail AI Editor](https://github.com/mukund-buddy/Smart-Thumbnail-AI-Editor).
-This repo carries the same product forward as a ready-to-host static artifact.
-The Gemini models ("Nano Banana" image model) and Google AI Studio belong to
+The app was originally developed as "Smart Thumbnail AI Editor" upstream -
+built with React + TypeScript inside a Node-based Vite pipeline. This repo
+carries the same product forward as a ready-to-host static artifact. The
+Gemini models ("Nano Banana" image model) and Google AI Studio belong to
 Google.
 
 ## License
