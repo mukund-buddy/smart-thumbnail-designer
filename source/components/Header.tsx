@@ -12,10 +12,10 @@ export const Header: React.FC = () => {
         <div className="flex items-center gap-3">
           <img
             src="logo.png"
-            alt="Smart Thumbnail AI logo"
+            alt="Smart Thumbnail Designer logo"
             className="w-10 h-10 object-contain drop-shadow-[0_0_10px_rgba(99,102,241,0.6)]"
           />
-          <h1 className="text-xl font-bold tracking-tight">Smart Thumbnail <span className="text-indigo-500 italic">AI</span></h1>
+          <h1 className="text-xl font-bold tracking-tight">Smart Thumbnail <span className="text-indigo-500 italic">Designer</span></h1>
         </div>
         <div className="hidden md:block">
           <p className="text-sm text-zinc-500">Professional YouTube Gaming Editor</p>
