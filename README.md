@@ -84,6 +84,10 @@ change the code itself (see [Rebuilding from source](#rebuilding-from-source)).
 
 ## Run it right now
 
+Step-by-step walk-throughs for GitHub Pages, Cloudflare Pages and Netlify
+(no build step needed, each under two minutes) live in
+[HOSTING.md](HOSTING.md).
+
 | Option | Steps |
 | --- | --- |
 | **GitHub Pages** | Repo Settings -> Pages -> Source: `main` branch, root -> your site lives at `https://mukund-buddy.github.io/smart-thumbnail-designer/` |

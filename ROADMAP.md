@@ -10,8 +10,8 @@ Documentation and hygiene items underway or just landed.
 - [x] CI workflow: lint + relative-base build check on every push and PR
       (`.github/workflows/ci.yml`)
 - [x] Real run-through captures of the key flows in `docs/images/` (issue #1)
-- [ ] README: step-by-step hosting walk-through (Cloudflare Pages, Netlify)
-      - issue #2
+- [x] README: step-by-step hosting walk-through (Cloudflare Pages, Netlify)
+      - [HOSTING.md](HOSTING.md), closes issue #2
 
 ## Next
 
